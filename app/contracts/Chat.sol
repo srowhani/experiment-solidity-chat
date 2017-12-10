@@ -52,6 +52,8 @@ contract Chat {
     if (!c._initialized) {
       c._initialized = true;
       c.num_messages = 0;
+    } else {
+      c = conversations[_from][_to];
     }
 
     uint n = c.num_messages;
